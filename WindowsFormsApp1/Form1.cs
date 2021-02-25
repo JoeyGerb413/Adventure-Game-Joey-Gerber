@@ -10,6 +10,13 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 
+//Gerber, Joey
+//Mr. T
+//ICU3U
+//Feb 26th
+
+
+
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
@@ -88,9 +95,9 @@ namespace WindowsFormsApp1
                 else if (scene == 9) { scene = 16; }
                 else if (scene == 10)
                 {
-                    int chance = randgen.Next(1, 3);
-                    if (chance == 2) { scene = 11; }
-                    else { scene = 12; }
+                    int chance = randgen.Next(1, 4);
+                    if (chance == 3) { scene = 11; }
+                    else { scene = 12; } //33% chance of continue, 66% chance of game over (roughly)
 
                 }
                 else if (scene == 11) { scene = 19; }
@@ -119,8 +126,7 @@ namespace WindowsFormsApp1
                 else if (scene == 34) { }
                 else if (scene == 99)
                 {
-                    Thread.Sleep(2000);
-                    Refresh();
+                    scene = 100;
                 }
             }
             else if (e.KeyCode == Keys.N) //orange button.
@@ -173,6 +179,8 @@ namespace WindowsFormsApp1
                     orangeButton.Text = "Game Over";
                     greenButton.Text = "Game Over";
                     storyImage.BackgroundImage = Properties.Resources.explosion;
+                    player.Play();
+
 
                     Refresh();
 
@@ -183,6 +191,7 @@ namespace WindowsFormsApp1
                     orangeButton.Text = "I can be of use in the cockpit.";
                     greenButton.Text = "I should get to the saferoom. That is protocol.";
                     storyImage.BackgroundImage = Properties.Resources.display;
+                    player.Play();
 
                     Refresh();
 
@@ -211,6 +220,7 @@ namespace WindowsFormsApp1
                     storyLabel.Text = "You reach the control room. You! the captain says. Tell your boss here that genocide is immoral.";
                     redButton.Text = "Any sort of killing is an evil act. I don't know how you can even be having an argument about this.";
                     greenButton.Text = "I mean, the needs of many...";
+                    orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.archangel;
 
                     Refresh();
@@ -238,6 +248,7 @@ namespace WindowsFormsApp1
                     storyLabel.Text = "You brace yourself, as the ship crash lands";
                     redButton.Text = "Continue";
                     greenButton.Text = "Continue";
+                    orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.explosion;
 
                     break;
@@ -245,6 +256,7 @@ namespace WindowsFormsApp1
                     storyLabel.Text = "The room closes in on you. You are heavily jarred by the impact.";
                     redButton.Text = "Continue";
                     greenButton.Text = "Continue";
+                    orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.beam;
 
                     break;
@@ -252,6 +264,7 @@ namespace WindowsFormsApp1
                     storyLabel.Text = "The room closes in on you. A steel beam impales you.";
                     redButton.Text = "Game over";
                     greenButton.Text = "Game over";
+                    orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.beam;
                     break;
                 case 13:
@@ -264,12 +277,14 @@ namespace WindowsFormsApp1
                     storyLabel.Text = "After checking the monitor, you rule that the ships exoskeleton is heavily damaged, thus exposing the safe room.";
                     redButton.Text = "Continue";
                     greenButton.Text = "Continue";
+                    orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.display;
                     break;
                 case 15:
                     storyLabel.Text = "relieved, you wait with the rest of the crew. Suddenly, the chamber starts to crumble.Your last moments are full of panic, when suddenly you are shattered.";
                     redButton.Text = "Game Over";
                     greenButton.Text = "Game Over";
+                    orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.beam;
                     break;
                 case 16:
@@ -328,14 +343,15 @@ namespace WindowsFormsApp1
                     break;
                 case 24:
                     storyLabel.Text = "Taking this opportunity, the head scientist notices you. You try to talk him down, but the bullet flies through your torso.";
-                    redButton.Text = "";
-                    greenButton.Text = "";
+                    redButton.Text = "Game Over";
+                    greenButton.Text = "Game Over";
                     orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.explosion;
                     break;
                 case 25:
                     storyLabel.Text = "You struggle with him for several moments, until finally you manage to choke him out. ";
                     redButton.Text = "Continue";
+                    greenButton.Text = "Continue";
                     orangeButton.Text = "";
 
                     break;
@@ -349,6 +365,7 @@ namespace WindowsFormsApp1
                     storyLabel.Text = "A man, disheveled, who you recognize as the head scientist, pushes you aside and enters the cryosleep chamber.";
                     redButton.Text = "NOOOO! Unless I start signalling, it will be months before anyone comes.";
                     greenButton.Text = "Well, I better check to see if I can signal somebody.";
+                    orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.cryo_chamber1;
                     break;
                 case 28:
@@ -364,10 +381,14 @@ namespace WindowsFormsApp1
                     storyLabel.Text = "You decide to take a look at the broadcasting controls. You could try to send for help.";
                     redButton.Text = "Is there even a question?";
                     greenButton.Text = "From what I may have learned before, other humans finding this ship may not be a good idea.";
+                    orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.Wifi_logo;
                     break;
                 case 31:
                     storyLabel.Text = "You fall asleep... you're not dead, in fact, you do not know where you are....";
+                    redButton.Text = "Game over";
+                    greenButton.Text = "Game over";
+                    orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.alienworld1;
                     break;
                 case 32:
@@ -376,6 +397,11 @@ namespace WindowsFormsApp1
                     greenButton.Text = "Continue";
                     orangeButton.Text = "Continue";
                     storyImage.BackgroundImage = Properties.Resources.space_1728314__340;
+                    break;
+                case 98:
+                    Thread.Sleep(2000);
+                    Refresh();
+                    Application.Exit();
                     break;
                 case 99:
                     storyLabel.Text = "Would you like to play again?";

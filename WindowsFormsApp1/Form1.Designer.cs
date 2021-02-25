@@ -129,9 +129,10 @@
             // 
             // storyImage
             // 
-            this.storyImage.Location = new System.Drawing.Point(0, 59);
+            this.storyImage.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.storyImage.Location = new System.Drawing.Point(0, 0);
             this.storyImage.Name = "storyImage";
-            this.storyImage.Size = new System.Drawing.Size(308, 391);
+            this.storyImage.Size = new System.Drawing.Size(799, 450);
             this.storyImage.TabIndex = 8;
             this.storyImage.TabStop = false;
             // 
