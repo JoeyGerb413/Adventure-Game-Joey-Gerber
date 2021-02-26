@@ -44,7 +44,7 @@
             // 
             this.greenButton.BackColor = System.Drawing.Color.Lime;
             this.greenButton.Enabled = false;
-            this.greenButton.Location = new System.Drawing.Point(334, 354);
+            this.greenButton.Location = new System.Drawing.Point(334, 297);
             this.greenButton.Name = "greenButton";
             this.greenButton.Size = new System.Drawing.Size(465, 23);
             this.greenButton.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             this.redButton.BackColor = System.Drawing.Color.Red;
             this.redButton.Enabled = false;
-            this.redButton.Location = new System.Drawing.Point(334, 383);
+            this.redButton.Location = new System.Drawing.Point(334, 326);
             this.redButton.Name = "redButton";
             this.redButton.Size = new System.Drawing.Size(465, 23);
             this.redButton.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             this.orangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.orangeButton.Enabled = false;
-            this.orangeButton.Location = new System.Drawing.Point(334, 415);
+            this.orangeButton.Location = new System.Drawing.Point(334, 350);
             this.orangeButton.Name = "orangeButton";
             this.orangeButton.Size = new System.Drawing.Size(465, 23);
             this.orangeButton.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.storyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.storyLabel.Location = new System.Drawing.Point(331, 59);
             this.storyLabel.Name = "storyLabel";
-            this.storyLabel.Size = new System.Drawing.Size(468, 279);
+            this.storyLabel.Size = new System.Drawing.Size(468, 209);
             this.storyLabel.TabIndex = 3;
             this.storyLabel.Text = "You are a crew member aboard the Archangel, \r\nan exploration vessel. What is your" +
     " occupation?";
@@ -101,7 +101,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(312, 359);
+            this.label1.Location = new System.Drawing.Point(310, 302);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(312, 388);
+            this.label2.Location = new System.Drawing.Point(310, 331);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(14, 13);
             this.label2.TabIndex = 6;
@@ -121,7 +121,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(314, 420);
+            this.label3.Location = new System.Drawing.Point(313, 360);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 13);
             this.label3.TabIndex = 9;
@@ -130,6 +130,7 @@
             // storyImage
             // 
             this.storyImage.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.storyImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.storyImage.Location = new System.Drawing.Point(0, 0);
             this.storyImage.Name = "storyImage";
             this.storyImage.Size = new System.Drawing.Size(799, 450);

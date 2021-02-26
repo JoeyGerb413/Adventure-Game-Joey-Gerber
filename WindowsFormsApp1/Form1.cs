@@ -23,8 +23,9 @@ namespace WindowsFormsApp1
     {
         int scene = 0;
         Random randgen = new Random();
-        SoundPlayer player = new SoundPlayer(Properties.Resources.Bomb_Exploding_Sound_Explorer_68256487);
-        SoundPlayer play = new SoundPlayer(Properties.Resources.UFO_Takeoff_Sonidor_1604321570);
+        SoundPlayer xplodeplayer = new SoundPlayer(Properties.Resources.Bomb_Exploding_Sound_Explorer_68256487);
+        SoundPlayer ufoplayer = new SoundPlayer(Properties.Resources.UFO_Takeoff_Sonidor_1604321570);
+        SoundPlayer chokeplayer = new SoundPlayer(Properties.Resources.neck_snap);
 
 
         public Form1()
@@ -150,7 +151,7 @@ namespace WindowsFormsApp1
                     orangeButton.Text = "Scientist";
                     greenButton.Text = "Engineer";
                     storyImage.BackgroundImage = Properties.Resources.archangel;
-                    player.Play();  
+                    ufoplayer.Play();  
                     Refresh();
                     break;
                 case 1:
@@ -159,7 +160,7 @@ namespace WindowsFormsApp1
                     orangeButton.Text = "";
                     greenButton.Text = "This is interesting, I am going to pay attention.";
                     storyImage.BackgroundImage = Properties.Resources.engine;
-                    player.Play();
+                    xplodeplayer.Play();
                     Refresh();
 
                     break;
@@ -179,7 +180,7 @@ namespace WindowsFormsApp1
                     orangeButton.Text = "Game Over";
                     greenButton.Text = "Game Over";
                     storyImage.BackgroundImage = Properties.Resources.explosion;
-                    player.Play();
+                    xplodeplayer.Play();
 
 
                     Refresh();
@@ -191,7 +192,7 @@ namespace WindowsFormsApp1
                     orangeButton.Text = "I can be of use in the cockpit.";
                     greenButton.Text = "I should get to the saferoom. That is protocol.";
                     storyImage.BackgroundImage = Properties.Resources.display;
-                    player.Play();
+                    xplodeplayer.Play();
 
                     Refresh();
 
@@ -340,6 +341,7 @@ namespace WindowsFormsApp1
                     redButton.Text = "I shouldn't startle him. Maybe we can piece out a solution to this situation.";
                     greenButton.Text = "YOU KILLED THE CAPTAIN! YOU'LL PAY FOR THAT";
                     orangeButton.Text = "";
+                    ufoplayer.Play();
                     break;
                 case 24:
                     storyLabel.Text = "Taking this opportunity, the head scientist notices you. You try to talk him down, but the bullet flies through your torso.";
@@ -353,6 +355,7 @@ namespace WindowsFormsApp1
                     redButton.Text = "Continue";
                     greenButton.Text = "Continue";
                     orangeButton.Text = "";
+                    chokeplayer.Play();
 
                     break;
                 case 26:
@@ -376,6 +379,7 @@ namespace WindowsFormsApp1
                     greenButton.Text = "Game over";
                     orangeButton.Text = "Game over";
                     storyImage.BackgroundImage = Properties.Resources.cryo_chamber1;
+                    ufoplayer.Play();
                     break;
                 case 30:
                     storyLabel.Text = "You decide to take a look at the broadcasting controls. You could try to send for help.";
@@ -397,6 +401,7 @@ namespace WindowsFormsApp1
                     greenButton.Text = "Continue";
                     orangeButton.Text = "Continue";
                     storyImage.BackgroundImage = Properties.Resources.space_1728314__340;
+                    ufoplayer.Play();
                     break;
                 case 98:
                     Thread.Sleep(2000);
@@ -409,6 +414,7 @@ namespace WindowsFormsApp1
                     greenButton.Text = "Play Again";
                     orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.display;
+                    ufoplayer.Play();
 
                     break;
                     break;
