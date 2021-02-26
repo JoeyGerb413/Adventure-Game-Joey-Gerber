@@ -230,7 +230,7 @@ namespace WindowsFormsApp1
 
                     break;
                 case 8:
-                    storyLabel.Text = $"The Captain won't budge. After a heated conversation, the head scientist lunges at the Captain, brutally stabbing him as you watch in horror. You hear an explosion, as the scientist turns towards you, knife in hand.";
+                    storyLabel.Text = $"Your opinion does little to change the arguement. After a heated discussion, the head scientist lunges at the Captain, brutally stabbing him as you watch in horror. You hear an explosion, as the scientist turns towards you, knife in hand.";
                     redButton.Text = "I'm gonna run and hide.(Hide in nearest room)";
                     orangeButton.Text = "Lets get to the cockpit. (Head to the cockpit)";
                     greenButton.Text = "I should get to the saferoom. That is protocol. Hopefully he doesn't follow me.(Head to the saferoom)";
