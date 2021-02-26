@@ -127,7 +127,9 @@ namespace WindowsFormsApp1
                 else if (scene == 34) { }
                 else if (scene == 99)
                 {
-                    scene = 100;
+                    Thread.Sleep(2000);
+                    Refresh();
+                    Application.Exit();
                 }
             }
             else if (e.KeyCode == Keys.N) //orange button.
@@ -297,7 +299,7 @@ namespace WindowsFormsApp1
 
                     break;
                 case 17:
-                    storyLabel.Text = $"You read the mission transcript: \n Fat Man \n The true cargo of this ship must not be compromised, Dr. Lewwings. \n If nothing else is possible, due to an issue, plant explosives on the following key engine parts. \n This obscure crash will result in the toxication and death of an alien species. Humanity shall claim superiority yet again...";
+                    storyLabel.Text = $"You read the mission transcript: \n Fat Man \n The true cargo of this ship must not be compromised, Dr. Lewwings. \n If nothing else is possible, due to an issue, plant explosives on the following key engine parts above Vandaka IV. \n This combustion will result in the destruction of World Vandaka and the Surtians. Humanity shall claim superiority once again...";
                     redButton.Text = "There is a stunning impact.";
                     greenButton.Text = "Ouch!";
                     orangeButton.Text = "";
@@ -389,7 +391,7 @@ namespace WindowsFormsApp1
                     storyImage.BackgroundImage = Properties.Resources.Wifi_logo;
                     break;
                 case 31:
-                    storyLabel.Text = "You fall asleep... you're not dead, in fact, you do not know where you are....";
+                    storyLabel.Text = "After several days you fall asleep... you're not dead, in fact, you do not know where you are.... the orbs glow.";
                     redButton.Text = "Game over";
                     greenButton.Text = "Game over";
                     orangeButton.Text = "";
