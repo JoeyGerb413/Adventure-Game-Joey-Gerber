@@ -153,7 +153,7 @@ namespace WindowsFormsApp1
                     orangeButton.Text = "Scientist";
                     greenButton.Text = "Engineer";
                     storyImage.BackgroundImage = Properties.Resources.archangel;
-                    ufoplayer.Play();  
+                    ufoplayer.Play();
                     Refresh();
                     break;
                 case 1:
@@ -231,9 +231,9 @@ namespace WindowsFormsApp1
                     break;
                 case 8:
                     storyLabel.Text = $"The Captain won't budge. After a heated conversation, the head scientist lunges at the Captain, brutally stabbing him as you watch in horror. You hear an explosion, as the scientist turns towards you, knife in hand.";
-                    redButton.Text = "I'm gonna run and hide.";
-                    orangeButton.Text = "Lets get to the cockpit.";
-                    greenButton.Text = "I should get to the saferoom. That is protocol. Hopefully he doesn't follow me.";
+                    redButton.Text = "I'm gonna run and hide.(Hide in nearest room)";
+                    orangeButton.Text = "Lets get to the cockpit. (Head to the cockpit)";
+                    greenButton.Text = "I should get to the saferoom. That is protocol. Hopefully he doesn't follow me.(Head to the saferoom)";
                     storyImage.BackgroundImage = Properties.Resources.display;
 
                     Refresh();
@@ -272,8 +272,8 @@ namespace WindowsFormsApp1
                     break;
                 case 13:
                     storyLabel.Text = "You reach the safe-room with the rest of the crew. The ship is going down fast. Would you like to study the rooms integrity?";
-                    redButton.Text = "I better be safe and take a look.";
-                    greenButton.Text = "By the time I figure that out, ship could be gone.";
+                    redButton.Text = "I better be safe and take a look. (check safe-room schematics)";
+                    greenButton.Text = "By the time I figure that out, ship could be gone. (Run into safe-room)";
                     storyImage.BackgroundImage = Properties.Resources.display;
                     break;
                 case 14:
@@ -301,7 +301,7 @@ namespace WindowsFormsApp1
                 case 17:
                     storyLabel.Text = $"You read the mission transcript: \n Fat Man \n The true cargo of this ship must not be compromised, Dr. Lewwings. \n If nothing else is possible, due to an issue, plant explosives on the following key engine parts above Vandaka IV. \n This combustion will result in the destruction of World Vandaka and the Surtians. Humanity shall claim superiority once again...";
                     redButton.Text = "There is a stunning impact.";
-                    greenButton.Text = "Ouch!";
+                    greenButton.Text = "Check out the alien world";
                     orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.display;
 
@@ -310,9 +310,9 @@ namespace WindowsFormsApp1
                     break;
                 case 19:
                     storyLabel.Text = "You open your eyes as the dust settles. You are on some alien world. ";
-                    redButton.Text = "Maybe some of the others survived in the safe-room.";
+                    redButton.Text = "Maybe some of the others survived in the safe-room. (check safe-room)";
                     greenButton.Text = "Lets take a look at the surroundings (exit the ship)";
-                    orangeButton.Text = "I might try to find some equipment, see what I can do with it.";
+                    orangeButton.Text = "I might try to find some equipment, see what I can do with it. (Try to find equipment)";
                     storyImage.Image = Properties.Resources.alienworld1;
                     break;
                 case 20:
@@ -325,23 +325,23 @@ namespace WindowsFormsApp1
                     break;
                 case 21:
                     storyLabel.Text = "There are no survivors. The whole place is caved in.";
-                    redButton.Text = "Lets look for equipment";
-                    greenButton.Text = "Lets try to see if anyone made it outside.";
+                    redButton.Text = "Lets look for equipment (check equipment areas)";
+                    greenButton.Text = "Lets try to see if anyone made it outside. (exit the ship)";
                     orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.beam;
                     break;
                 case 22:
-                    storyLabel.Text = "You locate two chambers that are still intact. The cryosleep room, and the control room.";
-                    redButton.Text = "lets go to the control room";
-                    greenButton.Text = "Cryosleep will keep me alive until a rescue team shows up.";
+                    storyLabel.Text = "You locate two chambers that are still intact. The cryosleep room, and the broadcast room.";
+                    redButton.Text = "lets go to the broadcast room (check control room)";
+                    greenButton.Text = "Cryosleep will keep me alive until a rescue team shows up. (check cryosleep)";
                     orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.cryo_chamber1;
 
                     break;
                 case 23:
                     storyLabel.Text = "The head scientist is lying down in this room. He doesn't see you, but near him is the corpse of the Captain, shot. It is clear what had happened.";
-                    redButton.Text = "I shouldn't startle him. Maybe we can piece out a solution to this situation.";
-                    greenButton.Text = "YOU KILLED THE CAPTAIN! YOU'LL PAY FOR THAT";
+                    redButton.Text = "I shouldn't startle him. Maybe we can piece out a solution to this situation. (Wait and be careful)";
+                    greenButton.Text = "YOU KILLED THE CAPTAIN! YOU'LL PAY FOR THAT (Attack head scientist)";
                     orangeButton.Text = "";
                     ufoplayer.Play();
                     break;
@@ -358,18 +358,17 @@ namespace WindowsFormsApp1
                     greenButton.Text = "Continue";
                     orangeButton.Text = "";
                     chokeplayer.Play();
-
                     break;
                 case 26:
                     storyLabel.Text = "You reach the one remaining Cryosleep chamber. If anyone ever came to see what happened, they would find you. You hear footsteps. Do you wish to check the integrity of the chamber, or enter the cryosleep chamber.";
-                    redButton.Text = "What if somebody else comes? If the room held up, the chamber should have too.";
-                    greenButton.Text = "Lets make sure I won't get gassed or anything.";
+                    redButton.Text = "What if somebody else comes? If the room held up, the chamber should have too. (Enter cryosleep)";
+                    greenButton.Text = "Lets make sure I won't get gassed or anything. (Check cryosleep schematics)";
                     storyImage.BackgroundImage = Properties.Resources.cryo_chamber1;
                     break;
                 case 27:
                     storyLabel.Text = "A man, disheveled, who you recognize as the head scientist, pushes you aside and enters the cryosleep chamber.";
-                    redButton.Text = "NOOOO! Unless I start signalling, it will be months before anyone comes.";
-                    greenButton.Text = "Well, I better check to see if I can signal somebody.";
+                    redButton.Text = "NOOOO! Unless I start signalling, it will be months before anyone comes. (Check broadcasting room)";
+                    greenButton.Text = "Well, I better check to see if I can signal somebody. (Check broadcasting room)";
                     orangeButton.Text = "";
                     storyImage.BackgroundImage = Properties.Resources.cryo_chamber1;
                     break;
@@ -426,8 +425,8 @@ namespace WindowsFormsApp1
 
 
 
-            } 
             }
-        
+        }
+
     }
 }
