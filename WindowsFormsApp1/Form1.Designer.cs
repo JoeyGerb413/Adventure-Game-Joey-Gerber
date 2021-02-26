@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.greenButton = new System.Windows.Forms.Button();
             this.redButton = new System.Windows.Forms.Button();
             this.orangeButton = new System.Windows.Forms.Button();
@@ -152,6 +153,7 @@
             this.Controls.Add(this.redButton);
             this.Controls.Add(this.greenButton);
             this.Controls.Add(this.storyImage);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "OVERRIDE";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);

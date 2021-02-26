@@ -143,5 +143,8 @@
   <ItemGroup>
     <None Include="Resources\neck_snap-Vladimir-719669812.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Science-Physics %281%29.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
